@@ -1,0 +1,18 @@
+driver.get("https://toyota.cz");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		driver.findElement(By.id("onetrust-accept-btn-handler")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("/html/body/header/div/nav/div/div/div/ul/li/a")).click(); //absolute x-path
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[@data-id='9b784ecc-4d59-4c78-b41b-ebbb3b3dc7e5']")).click(); // Relative x-path
+		Thread.sleep(4000);
+		driver.findElement(By.xpath("//img[starts-with(@alt, 'Toyota Aygo')]")).click(); // start-with locator
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//span[contains(@class, 'build-label')]")).click(); // contains locator
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//a[@role='link' and @class='Text__Button-sc-1by4wqj-0 hseSEO   btn-text']")).click(); // and locator 
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//span[text()='Změnit výbavu']")).click(); // text locator
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[@data-gt-label='https://www.toyota.cz' or @class='brand-logo']")).click();
