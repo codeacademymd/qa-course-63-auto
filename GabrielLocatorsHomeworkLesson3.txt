@@ -15,4 +15,4 @@ driver.get("https://toyota.cz");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//span[text()='Změnit výbavu']")).click(); // text locator
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//a[@data-gt-label='https://www.toyota.cz' or @class='brand-logo']")).click();
+		driver.findElement(By.xpath("//a[@data-gt-label='https://www.toyota.cz' or @class='brand-logo']")).click(); // or locator
