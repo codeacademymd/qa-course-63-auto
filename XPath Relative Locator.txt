@@ -1,0 +1,39 @@
+		//XPath Relative Locator
+		driver.get("https://apple.com/");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//a[@id='globalnav-menubutton-link-bag']")).click();
+		
+		//XPath Absolute Locator
+		driver.get("https://apple.com");
+	        driver.manage().window().maximize();
+	        Thread.sleep(4000);
+	        driver.findElement(By.xpath("/html/body/div[1]/nav/div/ul/li[2]/div/div/div[10]/ul/li[1]/a/span[1]")).click();
+
+		//XPATH starts-with
+		driver.get("https://apple.com/");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//div[starts-with(@id,'ac-ls-dropdown')]")).click();
+
+
+		//XPATH contains
+		driver.get("https://apple.com/");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//div[contains(@id, 'dropdown-')]")).click();
+
+		//XPATH  text()
+		driver.get("https://www.point.md");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("/html/body/div[4]/div[2]/div[1]/div[2]/div[2]/button[2]/p")).click();
+		driver.findElement(By.xpath("//a[text()='Политика']")).click();
+
+                //XPATH  AND
+                driver.get("https://www.ebay.de/");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//input[@type='text' and name='_nkw']")).sendKeys("iphone");
+                
+                //XPATH  OR
+                driver.get("https://www.ebay.de/");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//input[@type='text' and name='_nkw']")).sendKeys("iphone");
+
+
