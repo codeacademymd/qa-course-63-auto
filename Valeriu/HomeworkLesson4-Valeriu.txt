@@ -1,0 +1,39 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class HomeWork4 {
+
+public static void main(String[] args) throws InterruptedException {
+WebDriverManager.chromedriver().setup();
+ChromeDriver driver = new ChromeDriver();
+driver.get("https://olx.ro");
+Thread.sleep(3000);
+driver.manage().window().maximize();
+driver.findElement(By.cssSelector("button[id='onetrust-accept-btn-handler']")).click();
+Thread.sleep(3000);
+driver.findElement(By.cssSelector("a[class='css-1gpccxq']")).click();
+Thread.sleep(3000);
+driver.findElement(By.cssSelector("a[class='css-f0mzyq']")).click();
+Thread.sleep(3000);
+// driver.findElement(By.cssSelector("button[id='laq-close-7fzwEE6mKNL7']")).click();
+// Thread.sleep(3000);
+driver.findElement(By.linkText("Cum sunt organizate anunțurile?")).click();
+Thread.sleep(3000);
+driver.findElement(By.xpath("/html/body/div[4]/div[1]/div/div/div/div/div[3]/div[1]")).click();
+Thread.sleep(3000);
+driver.findElement(By.cssSelector("a[href='/olxhelpro/s/topic/0TO09000000khDHGAY/contul-tau-olxro'")).click();
+Thread.sleep(3000);
+driver.findElement(By.cssSelector("input[placeholder='Căutare'")).click();
+Thread.sleep(3000);
+driver.findElement(By.cssSelector("input[placeholder='Căutare'")).sendKeys("masina");
+Thread.sleep(3000);
+driver.findElement(By.cssSelector("button[type='button'][title='Căutare']")).click();
+Thread.sleep(3000);
+// driver.findElement(By.cssSelector("div[class^='__sort'")).click();
+// Thread.sleep(3000);
+// driver.findElement(By.cssSelector("li[class*='slds-dropdown__item sortMenuItem search-results-grid-header__sort__item'")).click();
+}
+
+}

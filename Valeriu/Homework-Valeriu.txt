@@ -1,0 +1,36 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class HomeworkValeriu {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver = new ChromeDriver();
+		
+		driver.get("https://e-pescuit.mediu.gov.md/");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//body/main[1]/div[2]/div[1]/button[1]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//img[starts-with(@alt,'Verifică ')]")).click();		
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//button[contains(@class, 'swal2-styled')]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//button[text()='Renunță']")).click();
+		Thread.sleep(3000);
+		
+//		driver.findElement(By.xpath("//button[ends-with(@class, 'button--sound-off')]")).click(); NU FUNCTIONEAZA ...
+		
+		driver.findElement(By.xpath("//a[@class='featured-list__link md-trigger' and @data-modal='request-permit']")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//img[@class='close-btn' or @alt='Close']")).click();
+	
+	
+
+	}
+
+}
+
+
