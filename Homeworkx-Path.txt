@@ -1,0 +1,37 @@
+Homework:x-Path
+
+	//driver.get("https://999.md");
+		//driver.manage().window().maximize();
+		//driver.findElement(By.xpath("//img[@alt=BMW 3 Series']")).click();
+		
+		//X-Path Absolute Locator
+		//driver.get("https://999.md");
+		//driver.manage().window().maximize();
+		//driver.findElement(By.xpath("/html/body/div[3]/header/div[1]/nav/ul/li[1]/a")).click();
+		
+		
+		//XPATH starts-with
+        //driver.get("https://999.md");
+        //driver.manage().window().maximize();
+        //driver.findElement(By.xpath("//a[starts-with(@class,'header_bar_market tooltip tooltipstered')]")).click();
+		
+		
+		//XPATH Contains
+		//driver.get("https://999.md");
+		//driver.manage().window().maximize();
+		//driver.findElement(By.xpath("//a[contains(@class,'header_bar_market tooltip tooltipstered')]")).click();
+		
+		
+		//XPATH  text()
+		//driver.get("https://orange.md");
+		//driver.manage().window().maximize();
+		//driver.findElement(By.xpath("//a[text()='aici']")).click();  
+		
+		
+		//Xpath And
+		driver.get("https://apple.com");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//div[@id='ac-ls-dropdown-options'or class='ac-ls-dropdown-options']")).click();
+		
+		
+		
